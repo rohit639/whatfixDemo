@@ -20,7 +20,11 @@ import com.whatfix.pages.LandingPage;
 public class SelfHelpTest {
 	
 	static {
+		//done only for Mac & Windows
+		if(System.getProperty("os.name").contains("Windows"))
 		System.setProperty("webdriver.gecko.driver", "resources/geckodriver.exe");
+		else 
+			System.setProperty("webdriver.gecko.driver", "resources/geckodriver");
 		driver = new FirefoxDriver();
 	}
 	
